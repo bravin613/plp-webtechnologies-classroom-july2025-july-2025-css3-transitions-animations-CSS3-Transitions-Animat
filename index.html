@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI & Machine Learning Interactive Experience</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section with Animated Title -->
+    <header class="header">
+        <h1 class="main-title">AI & Machine Learning in the US</h1>
+        <p class="subtitle fade-in">Exploring the Future of Intelligent Web Development</p>
+    </header>
+
+    <!-- Navigation with Hover Effects -->
+    <nav class="navigation">
+        <button class="nav-btn" data-section="about">About AI/ML</button>
+        <button class="nav-btn" data-section="applications">Applications</button>
+        <button class="nav-btn" data-section="demo">Interactive Demo</button>
+        <button class="nav-btn" data-section="stats">Statistics</button>
+    </nav>
+
+    <!-- Main Content Container -->
+    <main class="container">
+        
+        <!-- PART 1: CSS ANIMATIONS SHOWCASE -->
+        <section class="hero-section">
+            <div class="animated-box pulse"></div>
+            <h2>CSS3 Animations in Action</h2>
+            <p>Hover over elements and watch them come alive!</p>
+        </section>
+
+        <!-- AI/ML Information Cards -->
+        <section class="cards-section">
+            <div class="card slide-in-left">
+                <div class="card-icon">🧠</div>
+                <h3>Neural Networks</h3>
+                <p>Deep learning models that power modern AI applications across the United States</p>
+                <button class="card-btn">Learn More</button>
+            </div>
+
+            <div class="card slide-in-up">
+                <div class="card-icon">💻</div>
+                <h3>Machine Learning</h3>
+                <p>Algorithms that learn from data to make predictions and decisions</p>
+                <button class="card-btn">Learn More</button>
+            </div>
+
+            <div class="card slide-in-right">
+                <div class="card-icon">⚡</div>
+                <h3>TensorFlow.js</h3>
+                <p>Run ML models directly in the browser for real-time intelligence</p>
+                <button class="card-btn">Learn More</button>
+            </div>
+        </section>
+
+        <!-- PART 3: JavaScript + CSS Animation Integration -->
+        <section class="interactive-section">
+            <h2>Interactive AI Demonstration</h2>
+            
+            <!-- Animation Control Panel -->
+            <div class="control-panel">
+                <button id="triggerAnimation" class="action-btn">Trigger Animation</button>
+                <button id="flipCard" class="action-btn">Flip Card</button>
+                <button id="showModal" class="action-btn">Show Modal</button>
+                <button id="startLoading" class="action-btn">Loading Demo</button>
+            </div>
+
+            <!-- Animated Target Box -->
+            <div id="animatedBox" class="target-box">
+                <p>Click buttons above to animate me!</p>
+            </div>
+
+            <!-- Flip Card -->
+            <div id="flipCardContainer" class="flip-card-container">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3>AI in Web Dev</h3>
+                            <p>Click to flip</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Future Ready</h3>
+                            <p>ML models run in browsers, enabling real-time intelligence</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Loading Animation -->
+            <div id="loadingContainer" class="loading-container hidden">
+                <div class="loading-spinner"></div>
+                <p>Processing AI Model...</p>
+            </div>
+        </section>
+
+        <!-- Statistics Dashboard -->
+        <section class="stats-section">
+            <h2>AI/ML Impact in the US</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number" data-target="87">0</div>
+                    <p>Billion $ Market Size</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="3.5">0</div>
+                    <p>Million AI Jobs</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="67">0</div>
+                    <p>% Companies Using AI</p>
+                </div>
+            </div>
+            <button id="animateStats" class="action-btn">Animate Statistics</button>
+        </section>
+
+        <!-- User Interaction Score Display -->
+        <section class="score-section">
+            <h3>Your Interaction Score</h3>
+            <div id="scoreDisplay" class="score-display">0</div>
+            <p>Points earned from interactions</p>
+            <button id="resetScore" class="action-btn secondary">Reset Score</button>
+        </section>
+
+    </main>
+
+    <!-- Modal Popup -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>🤖 AI-Powered Web Experience</h2>
+            <p>This modal demonstrates JavaScript-triggered CSS animations. Modern AI systems use similar techniques to create dynamic, responsive user interfaces.</p>
+            <button class="modal-btn">Got it!</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p> By Bravin| AI/ML Educational Demo 2025</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
