@@ -1,0 +1,609 @@
+/* ============================================
+   PART 1: CSS3 TRANSITIONS AND ANIMATIONS
+   ============================================ */
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* Header with Animation */
+.header {
+    text-align: center;
+    padding: 60px 20px;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: slideDown 0.8s ease-out;
+}
+
+/* Keyframe Animation: Slide Down */
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.main-title {
+    font-size: 3em;
+    color: #667eea;
+    margin-bottom: 10px;
+    animation: fadeInScale 1s ease-out 0.3s both;
+}
+
+/* Keyframe Animation: Fade In with Scale */
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.subtitle {
+    font-size: 1.2em;
+    color: #666;
+}
+
+.fade-in {
+    animation: fadeIn 1.5s ease-in;
+}
+
+/* Keyframe Animation: Simple Fade In */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Navigation with Hover Effects */
+.navigation {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px;
+    flex-wrap: wrap;
+}
+
+.nav-btn {
+    padding: 12px 30px;
+    background: white;
+    border: 2px solid #667eea;
+    color: #667eea;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* CSS Transition: Button Hover Effect */
+.nav-btn:hover {
+    background: #667eea;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.nav-btn:active {
+    transform: translateY(-1px);
+}
+
+/* Main Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Hero Section with Pulse Animation */
+.hero-section {
+    text-align: center;
+    padding: 60px 20px;
+    background: white;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.animated-box {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    margin: 0 auto 30px;
+    border-radius: 15px;
+}
+
+/* Keyframe Animation: Pulse */
+.pulse {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.7);
+    }
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0 0 0 20px rgba(102, 126, 234, 0);
+    }
+}
+
+/* Cards Section */
+.cards-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.card {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+/* Keyframe Animations: Slide In Effects */
+.slide-in-left {
+    animation: slideInLeft 0.8s ease-out 0.2s forwards;
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.slide-in-up {
+    animation: slideInUp 0.8s ease-out 0.4s forwards;
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.slide-in-right {
+    animation: slideInRight 0.8s ease-out 0.6s forwards;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* CSS Transition: Card Hover */
+.card:hover {
+    transform: translateY(-10px) rotate(2deg);
+    box-shadow: 0 15px 30px rgba(102, 126, 234, 0.3);
+}
+
+.card-icon {
+    font-size: 4em;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    color: #667eea;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.card-btn {
+    margin-top: 20px;
+    padding: 10px 25px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.card-btn:hover {
+    background: #764ba2;
+    transform: scale(1.05);
+}
+
+/* Interactive Section */
+.interactive-section {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.interactive-section h2 {
+    text-align: center;
+    color: #667eea;
+    margin-bottom: 30px;
+}
+
+.control-panel {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.action-btn {
+    padding: 12px 25px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.action-btn:hover {
+    background: #764ba2;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.action-btn.secondary {
+    background: #6c757d;
+}
+
+.action-btn.secondary:hover {
+    background: #5a6268;
+}
+
+/* Target Box for Animations */
+.target-box {
+    width: 300px;
+    height: 200px;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    margin: 0 auto 40px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+/* JavaScript-triggered Animation Classes */
+.bounce {
+    animation: bounce 0.6s ease;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    25% { transform: translateY(-30px); }
+    50% { transform: translateY(-15px); }
+    75% { transform: translateY(-30px); }
+}
+
+.shake {
+    animation: shake 0.5s ease;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    75% { transform: translateX(10px); }
+}
+
+.rotate {
+    animation: rotate360 1s ease;
+}
+
+@keyframes rotate360 {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.glow {
+    animation: glow 1s ease-in-out;
+}
+
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 5px rgba(102, 126, 234, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(102, 126, 234, 1), 0 0 60px rgba(102, 126, 234, 0.8);
+    }
+}
+
+/* Flip Card */
+.flip-card-container {
+    perspective: 1000px;
+    margin: 0 auto 40px;
+    width: 300px;
+    height: 250px;
+}
+
+.flip-card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card.flipped {
+    transform: rotateY(180deg);
+}
+
+.flip-card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.flip-card-front {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.flip-card-back {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    transform: rotateY(180deg);
+}
+
+/* Loading Animation */
+.loading-container {
+    text-align: center;
+    padding: 40px;
+    transition: opacity 0.3s ease;
+}
+
+.loading-container.hidden {
+    display: none;
+    opacity: 0;
+}
+
+.loading-container.show {
+    display: block;
+    opacity: 1;
+}
+
+.loading-spinner {
+    width: 60px;
+    height: 60px;
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #667eea;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Statistics Section */
+.stats-section {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.stats-section h2 {
+    color: #667eea;
+    margin-bottom: 30px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    padding: 30px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 15px;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: scale(1.05);
+}
+
+.stat-number {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Score Section */
+.score-section {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.score-section h3 {
+    color: #667eea;
+    margin-bottom: 20px;
+}
+
+.score-display {
+    font-size: 4em;
+    font-weight: bold;
+    color: #667eea;
+    margin: 20px 0;
+    transition: all 0.3s ease;
+}
+
+.score-display.updated {
+    animation: scoreUpdate 0.5s ease;
+}
+
+@keyframes scoreUpdate {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); color: #f5576c; }
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    animation: fadeIn 0.3s ease;
+}
+
+.modal.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    animation: slideInUp 0.4s ease;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content h2 {
+    color: #667eea;
+    margin-bottom: 20px;
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2em;
+    cursor: pointer;
+    color: #999;
+    transition: color 0.3s ease;
+}
+
+.close-modal:hover {
+    color: #333;
+}
+
+.modal-btn {
+    padding: 12px 30px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+.modal-btn:hover {
+    background: #764ba2;
+    transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.95);
+    color: #666;
+    margin-top: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2em;
+    }
+    
+    .cards-section {
+        grid-template-columns: 1fr;
+    }
+    
+    .control-panel {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .target-box {
+        width: 90%;
+    }
+}
